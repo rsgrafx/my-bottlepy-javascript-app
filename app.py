@@ -10,20 +10,9 @@ from bottle import run as RunApp
 
 app = Bottle()
 
-@error(404)
-def error404(error):
-  return app.HTTPError(404, "Sorry Not working")
-#   return HTMLfile('404.js', root='public/javascripts/errors/')
-
-# @route('/error')
-# def error():
-#   return HTMLfile('error.html', root='public/')
-#   # return HTMLfile('404.js', root='public/javascripts/errors/')
-
 @app.route('/')
 def index():
   return HTMLfile('index.html', root='public/')
-
 
 @app.route('/<filename:re:[a-z]+>')
 def index(filename):
@@ -32,22 +21,14 @@ def index(filename):
     open('public/' + filename +'.html')
     return HTMLfile((filename+'.html'), root='public/')
   except IOError as e:
-    response.set_header('Content-Type', 'application/voodoscript')
-    return HTMLfile('404.js', root='public/javascripts/errors/')
+    return HTMLfile('404.html', root='public/errors/')
     
-  # try:
-  #   if HTMLfile((filename+'.html'), root='public/'):
-  #     return HTMLfile((filename+'.html'), root='public/')
-  # except HTTPError:
-  #   return HTMLfile('index.html', root='public/')
-
-
 @app.route('/javascripts/<filename>')
 def serve_js(filename):
   return HTMLfile(filename, root='public/javascripts/')
 
 @app.route('/stylesheets/<filename>')
-def serve_js(filename):
+def serve_stylesheets(filename):
   return HTMLfile(filename, root='public/stylesheets/')
 
 @app.route('/javascripts/errors/<filename>')
