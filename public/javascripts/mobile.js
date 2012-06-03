@@ -11,11 +11,13 @@ if(window.innerWidth && window.innerWidth <= 480) {
 }
 
 window.MOBILE_APP = {
+	siteName: 'orion-bottle.local',	
 	targetDiv: $('#container') ,
 	
 	loadPage: function(url, status){
 
 		$('body').append('<div id="progress">Loading...</div>')
+		scrollTo(0,0)
 		if (url == undefined) {
 			$('#base-content').load('/ #content', this.HighJackLinks )
 		} else if (status == 'error') {
@@ -27,12 +29,20 @@ window.MOBILE_APP = {
 	HighJackLinks: function(response, status, xhr){
 		console.log(status);
 		console.log(xhr);
-		$('#progress').remove()
 		$('#container a').click(function(e) {
-			e.preventDefault();
-			window.MOBILE_APP.loadPage(e.target.href, status)
+			var url = e.target.href;
+			
+			console.log(this.siteName)
+			
+			if (url.match("/" + MOBILE_APP.siteName + "/")) {
+				e.preventDefault();
+				window.MOBILE_APP.loadPage(e.target.href, status)
+		}
 		})
-		
+		var title = $('h2').html() || 'Hello and Welcome!'
+		$('h1').html(title)
+		$('h2').remove()
+		$('#progress').remove()
 	},
 }
 
