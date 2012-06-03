@@ -15,6 +15,10 @@ def index():
 def about():
 	return HTMLfile('about.html', root='public/')
 
+@app.route('/bio')
+def biography():
+	return HTMLfile('about.html', root='public/')
+
 @app.route('/<filename:re:[a-z]+>')
 def index(filename):
   assert filename.isalpha()
