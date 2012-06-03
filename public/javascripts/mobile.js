@@ -19,11 +19,11 @@ window.MOBILE_APP = {
 		$('body').append('<div id="progress">Loading...</div>')
 		scrollTo(0,0)
 		if (url == undefined) {
-			$('#base-content').load('/ #content', this.HighJackLinks )
+			$('#base-content').load('/ #base-content', this.HighJackLinks )
 		} else if (status == 'error') {
-			$('#base-content').load('/ #content', this.HighJackLinks )
+			$('#base-content').load('/ #base-content', this.HighJackLinks )
 		} else {
-			$('#base-content').load(url + ' #content', this.HighJackLinks)
+			$('#base-content').load(url + ' #base-content', this.HighJackLinks)
 		}
 	},
 	HighJackLinks: function(response, status, xhr){
@@ -42,6 +42,42 @@ window.MOBILE_APP = {
 		var title = $('h2').html() || 'Hello and Welcome!'
 		$('h1').html(title)
 		$('h2').remove()
+		$('#progress').remove()
+	},
+	
+	PageHistory: [],
+	startUrl: 'index.html',
+	
+	LoadSetupPages: function(url){
+		$('body').append('<div id="progresss"> Loading..</div>')
+		scrollTo(0,0)
+		if (url == this.startUrl) {
+			var element = ' header ul'
+		} else {
+			var element = ' #content'
+		}
+		$('#base-content').load(url+element, function(){
+				var title = $('h2').html() || "Hello and Welcome";
+				$('h1').html(title)
+				$('h2').remove()
+				$('.leftButton').remove()
+				this.PageHistory.unshift({'url': url, 'title':title})
+				if (this.PageHistory > 1) {
+					$('header').append('<div class="leftButton"' + this.PageHistory[1].title + '</div>')
+					$('header .leftButton').click(function() {
+						var thisPage = this.PageHistory.shift()
+						var previousPage = this.PageHistory.shift()
+						MOBILE_APP.loadPage(previousPage.url)
+					});
+				}
+		});
+		
+		$('#container a').click(function(e) {
+			var url = e.target.href;
+			if (url.match('/'+this.siteName+'/'))
+			e.preventDefault()
+			this.loadPage(url)
+		})
 		$('#progress').remove()
 	},
 }
