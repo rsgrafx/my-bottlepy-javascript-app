@@ -1,0 +1,70 @@
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5325): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5325): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi'.
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi", line 3, in <module>
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1]     os.chdir(os.path.dirname(__file__))
+[Sat Jun 02 22:32:57 2012] [error] [client 127.0.0.1] NameError: name 'os' is not defined
+[Sat Jun 02 22:34:20 2012] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi
+[Sat Jun 02 22:34:30 2012] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi
+[Sat Jun 02 22:34:35 2012] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/config/server.wsgi
+[Sat Jun 02 22:36:09 2012] [error] [client 127.0.0.1] No WSGI daemon process called 'my-bottlepy-javascript-app' has been configured: /Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5665): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5665): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1]     import app as Application
+[Sat Jun 02 22:40:16 2012] [error] [client 127.0.0.1] ImportError: No module named app
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5665): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5665): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1]     import app as Application
+[Sat Jun 02 22:40:21 2012] [error] [client 127.0.0.1] ImportError: No module named app
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717, process='bottlepy', application=''): Failed to parse WSGI script file '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1]      import from config import app
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1]                ^
+[Sat Jun 02 22:42:28 2012] [error] [client 127.0.0.1]  SyntaxError: invalid syntax
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1]     from config import app
+[Sat Jun 02 22:42:43 2012] [error] [client 127.0.0.1] ImportError: No module named config
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1]     from config import app
+[Sat Jun 02 22:43:18 2012] [error] [client 127.0.0.1] ImportError: No module named config
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1]     from config import app
+[Sat Jun 02 22:44:50 2012] [error] [client 127.0.0.1] ImportError: No module named config
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5717): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1]     import config
+[Sat Jun 02 22:47:06 2012] [error] [client 127.0.0.1] ImportError: No module named config
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 6, in <module>
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1]     import config
+[Sat Jun 02 22:47:23 2012] [error] [client 127.0.0.1] ImportError: No module named config
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 13, in <module>
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1]     application = Application
+[Sat Jun 02 22:48:01 2012] [error] [client 127.0.0.1] NameError: name 'Application' is not defined
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Target WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi' cannot be loaded as Python module.
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1] mod_wsgi (pid=5770): Exception occurred processing WSGI script '/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi'.
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1]   File "/Users/orionengleton/Sites/PersonalWork/Clients/my-bottlepy-javascript-app/server.wsgi", line 8, in <module>
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1]     from config import Application
+[Sat Jun 02 22:49:40 2012] [error] [client 127.0.0.1] ImportError: No module named config
