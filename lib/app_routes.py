@@ -11,7 +11,7 @@ app = Bottle()
 def index():
   return HTMLfile('index.html', root='public/')
 
-@get('/about')
+@app.route('/about')
 def about():
 	return HTMLfile('about.html', root='public/')
 
