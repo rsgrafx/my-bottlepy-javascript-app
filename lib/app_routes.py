@@ -15,6 +15,11 @@ def index():
 def about():
 	return HTMLfile('about.html', root='public/')
 
+@app.route('/main')
+def about():
+	return HTMLfile('main.html', root='public/')
+
+
 @app.route('/bio')
 def biography():
 	return HTMLfile('about.html', root='public/')
@@ -27,11 +32,24 @@ def index(filename):
     return HTMLfile((filename+'.html'), root='public/')
   except IOError as e:
     return HTMLfile('404.html', root='public/errors/')
-    
+
+@app.route('/javascripts/includes/<filename>')
+def serve_js_includes(filename):
+  return HTMLfile(filename, root='public/javascripts/includes/')    
+
 @app.route('/javascripts/<filename>')
 def serve_js(filename):
   return HTMLfile(filename, root='public/javascripts/')
 
+@app.route('/images/<filename>')
+def serve_images(filename):
+  return HTMLfile(filename, root='public/images')
+
+@app.route('/images/icons/<filename>')
+def serve_images(filename):
+  return HTMLfile(filename, root='public/images/icons/')
+
+  
 @app.route('/stylesheets/<filename>')
 def serve_stylesheets(filename):
   return HTMLfile(filename, root='public/stylesheets/')
