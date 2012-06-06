@@ -12,4 +12,4 @@ sys.path.append('routes')
 
 import routes.page_routes
 import routes.asset_routes
-
+import routes.json_api

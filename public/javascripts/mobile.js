@@ -80,8 +80,22 @@ window.MOBILE_APP = {
 		})
 		$('#progress').remove()
 	},
+	loadUserObject: function(retailer_id, card_number){
+		$.mobile.showPageLoadingMsg()
+		window.setTimeout(20000)
+		// Will not allow * Access-Origin Error
+		var data;
+
+		$.get('http://orion-bottle.local/api/retailers/' + retailer_id + '/consumers/'+card_number , function(data){
+			console.log(data)
+			$('#base-content').html(data).listview()
+			$.mobile.hidePageLoadingMsg()
+		});
+		return data;
+	},
 }
 
+
 $(document).ready(function(){
-	MOBILE_APP.loadPage();
+	// MOBILE_APP.loadPage();
 })

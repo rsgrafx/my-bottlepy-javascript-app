@@ -5,6 +5,7 @@ from bottle import (
     cookie_is_encoded, abort, debug
     )
 from bottle import static_file as HTMLfile
+
 import os.path
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))

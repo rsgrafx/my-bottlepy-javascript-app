@@ -24,11 +24,11 @@ def about():
 def about():
 	return HTMLfile('main.html', root='public/')
 
-
 @app.route('/bio')
 def biography():
 	return HTMLfile('about.html', root='public/')
 
+@app.route('<filename:re:[a-z]+>')
 @app.route('/<filename:re:[a-z]+>')
 def index(filename):
   assert filename.isalpha()

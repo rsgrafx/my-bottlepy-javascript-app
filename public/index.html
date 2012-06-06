@@ -8,7 +8,7 @@
 		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 
-		<!--  <script type="text/javascript" charset="utf-8" src='/javascripts/mobile.js'></script> -->
+		 <script type="text/javascript" charset="utf-8" src='/javascripts/mobile.js'></script>
 
 		<link rel="apple-touch-icon" href="/images/mobile/mycustomIcon.png">
 		<link rel="apple-touch-icon-precomposed" href="/images/mobile/mycustomIcon.png">
@@ -22,34 +22,60 @@
 		<title>Orion Mobile:</title>
 	</head>
 	<body>
-		<section id="container" data-role='page'>
+		<section id="home" class='container' data-role='page' full-screen='true'>
 			<header data-role='header'>
-				<h1 class="myname"><a href='/'>Orion Engleton</a></h1>
-				</header>
-				<div id="utitilty">
+				<h1 class="myname"><a href='/'>Orion Engleton :: Home</a></h1>
+					<nav data-role='navbar'>
 					<ul>
+						<li><a href="/main">Main</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="#dates">Dates</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+					</nav>
+			</header>	
+
+			
+			<div id="base-content"> --- Main Home Page --- </div>
+			<div id='dates'>
+				<div data-role='header'>
+					<h1 id="dates">Dates</h1>
+					<a href="#" class='button back'>Today</a>
+				</div>
+				<ul class='edge-to-edge' data-role='listview'>
+					<li class='arrow'><a href="#date">Today</a></li>
+					<li class='arrow'><a href="#date">Yesterday</a></li>
+					<li class='arrow'><a href="#date">2 Days Ago</a></li>
+					<li class='arrow'><a href="#date">3 Days Ago</a></li>
+					<li class='arrow'><a href="#date">4 Days Ago</a></li>
+				</ul>
+			</div>
+			<!-- <div class="leftButton">Home</div> -->
+			
+			
+			<footer id="footer" data-role='footer' data-position='fixed'>
+				&copy; OrionEngleton.com
+				<nav data-role='navbar'>
+					<ul class='footer-list'>
 						<li><a href="/favorites">Fav's</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/bio">Bio</a></li>
 						<li><a href="/blog">Blog</a></li>
 					</ul>
-				</div>
-			
-			<nav></nav>
-			
-			<div id="base-content"> --- Main Home Page --- </div>
-			<!-- <div class="leftButton">Home</div> -->
-			
-			
-			<footer id="footer" data-role='footer'>
-				&copy; OrionEngleton.com
-				<ul class='footer-list'>
-					<li><a href="/favorites">Fav's</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/bio">Bio</a></li>
-					<li><a href="/blog">Blog</a></li>
-				</ul>
+				</nav>
 			</footer>
+		</section>
+
+		<section data-role='page' id='dates'>
+			<header data-role='header'>
+				<h1 id="dates-available">Dates Availablez</h1>
+				<a href="#home" class='button back'>Back</a>
+			</header>
+			<ul data-role='listview'>
+				<li><a href="#page1">Home Dates</a></li>
+				<li><a href="#page1">Home Dates</a></li>
+				<li><a href="#page1">Home Dates</a></li>
+			</ul>
 		</section>
 	</body>
 </html>
