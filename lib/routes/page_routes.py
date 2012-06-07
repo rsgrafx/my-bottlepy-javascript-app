@@ -28,6 +28,10 @@ def about():
 def biography():
 	return HTMLfile('about.html', root='public/')
 
+@app.route('/mytweets')
+def biography():
+	return HTMLfile('tweets.html', root='public/')
+
 @app.route('<filename:re:[a-z]+>')
 @app.route('/<filename:re:[a-z]+>')
 def index(filename):

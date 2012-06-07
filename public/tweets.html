@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+			<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+			<script type="text/javascript" charset="utf-8" src='/javascripts/mobile.js'></script>
+
+			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+			<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="only screen and (min-width: 482px)" title="no title" charset="utf-8">
+			<link rel="stylesheet" href="stylesheets/mobile.css" type="text/css" media="only screen and (max-width: 480px)" title="no title" charset="utf-8">		
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="/stylesheets/FUCKING-ie.css" type="text/css" media="all" title="no title" charset="utf-8">
+		<![endif]-->
+		
+		<link rel="apple-touch-icon" href="/images/mobile/mycustomIcon.png">
+		<link rel="apple-touch-icon-precomposed" href="/images/mobile/mycustomIcon.png">
+		<link rel="apple-touch-startup-image" href="/images/mobile/mycustomGraphic.png">
+		<meta name="applie-mobile-web-app" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<meta name="viewport" content="user-scalable=no, width=device-width">
+		<title>Orion Mobile:</title>
+	</head>
+	<body>
+		<section id="pageTweetList" data-role='page'>
+			<header data-role='header' data-position='fixed'>
+				<h1 class="myname"><a href='/'>Orion Engleton</a></h1>
+				<nav data-role='navbar'>
+				<ul>
+					<li><a href="/favorites">Fav's</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/bio">Bio</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/mytweets">Tweets</a></li>
+				</ul>
+				</nav>
+				<a href='#pageSettings'
+					 data-role='button'
+					 data-icon='gear'
+					 data-iconpos="notext"
+					 data-transition='flip'
+					 class='ui-btn-right'> Options</a>
+			</header>	
+			
+			<div id="content" data-role="content" class="content">
+				<ul data-role="listview">
+					<li>Setup Up Tweets</li>
+				</ul>
+			</div>
+			
+			<footer id="footer" data-role='footer' data-position='fixed'>
+				&copy; OrionEngleton.com
+				<nav data-role='navbar'>
+					<ul class='footer-list'>
+						<li><a href="/favorites">Fav's</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/bio">Bio</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+		
+		<section id="pageSettings" data-role="page">
+			<header data-role="header">
+				<h1>My Tweets</h1><a href="#pageTweetList" 
+				data-role='button'
+				data-icon='gear'
+				data-iconpos='notext'
+				data-transition='flip'
+				class='ui-btn-right'>List</a>
+			</header>
+			<div data-role="content" class="content">
+				<h3>Settings</h3>
+				<div data-role="fieldcontain" data-theme="a">
+					<label for="username">Twitter User Name:</label>
+					<input type="text" id="username" value="">
+					</div>
+					<div data-role="fieldcontain">
+					<label for="slider">Number of tweets to display:</label>
+					<input type="range" id="slider" name="slider" min="5" max="50" value="">
+				</div>
+				<a href="#pageTweetList" data-role='button'>Go!</a>
+			</div>
+
+			<footer id="footer" data-role='footer' data-position='fixed'>
+				&copy; OrionEngleton.com
+				<nav data-role='navbar'>
+					<ul class='footer-list'>
+						<li><a href="/favorites">Fav's</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/bio">Bio</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+		
+		<section data-role="page" id="pageTweetDetail">
+			<header data-role="header">
+				<h1 id="my_tweets">My Tweets</h1>
+			</header>
+
+			<div id="" class="content" data-role="content">
+				<div id="" class="container-tweet">
+					<p>Tweet data</p>
+				</div>
+			</div>
+			
+			<footer id="footer" data-role='footer' data-position='fixed'>
+				&copy; OrionEngleton.com
+				<nav data-role='navbar'>
+					<ul class='footer-list'>
+						<li><a href="/favorites">Fav's</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/bio">Bio</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+
+		<section id="pageError" data-role="page" data-theme='e'>
+			<header data-role="header"><h1>  O Mobile </h1></header>
+			<div class="content" data-role='content'></div>
+		</section>
+
+		<script type="text/javascript" charset="utf-8">
+			jQuery.fn.initApp()
+		</script>
+	</body>
+</html>
