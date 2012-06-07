@@ -1,126 +1,24 @@
-	body {
-	background-color: #ddd;
-	color: #222;
-	font-family: Helvetica, 'helvetica';
-	font-size: 1em;
-	margin: 0; padding:0;
-}
-header {
-	background-color: #ccc;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
-	border-color: #666;
-	border-style: solid;
-	border-width: 0 0 1px 0;
-}
-header h1 {
-	color : #222;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 0 auto;
-	padding: 10px 0;
-	text-align: center;
-	text-shadow: 0px 1px 0px #fff;
-	max-width: 160px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-header h1 a {
-	background-color: #ccc;
-	border-bottom: 1px solid #666;
-	color: #222;
-	display: block;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 10px 0;
-	text-align: center;
-	text-decoration:none;
-	text-shadow: 0px 1px 0px #fff;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
-}
-ul {
-	list-style: none;
-	margin: 10px;
-	padding: 0;
-}
+section {}
 
-ul.hide {
-	display: none;
+#base-content {
+	min-height: 100px;
+	margin:5px;
+	background: transparent;
 }
-
-ul li:first-child a {
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
+.portrait section {
+	background: transparent;
+	background: url('images/OMobile.png');
 }
-
-ul li:last-child a {
-	-webkit-border-bottom-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
+.landscape section {
+	background: #9efaa2;
+	background-image: -moz-linear-gradient(top, #fff, #9efaa2);
+	background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #fff), 
+										color-stop(1, #9efaa2)); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#9efaa2')";
 }
-
-ul li a:active, header ul li a:hover {
-	background-color:lightblue;
-	color: #fff;
-} 
-header ul li a {
-	background-color: #fff;
-	border: 1px solid #999;
-	color: #222;
-	display: block;
-	font-size: 17px;
-	margin-bottom: -1px;
-	padding: 12px 10px;
+.tweet-text {
+	
+}
+.tweet-text a {
+	font-size: 0.9em;
 	text-decoration: none;
-}
-div.leftButton {
-	position: absolute;
-	top: 300px;
-	left: 0px;
-	height: inherit;
-	text-align: center;
-	color: #fff;
-	padding: 10px;
-	text-shadow: rgba(0,0,0, 0.6) 0px -1px 0px;
-	line-height: 25px;
-	border-width: 0 8px 0 8px;
-	background-color: rgba(0, 0, 0, 0.3);
-/*	-webkit-border-image*/
-}
-
-ul {
-	list-style: none;
-	margin: 10px;
-	padding: 0;
-}
-ul li a {
-	background-color: #fff;
-}
-
-nav, aside, article {
-	padding: 10px;
-}
-
-footer {
-	padding: 5px;
-}
-ul.footer-list{
-	font-size: 15px;
-}
-ul.footer-list li {
-	float: left;
-	padding: 10px;
-}
-#progress {
-	-webkit-border-radius: 10px;
-	background-color: rgba(0,0,0, 0.7);
-	color: #fff;
-	font-size: 18px;
-	height: 80px;
-	left: 60px;
-	line-height: 80px;
-	margin: 0 auto;
-	position: absolute;
-	text-align: center;
-	top: 120px;
-	width: 200px;
 }

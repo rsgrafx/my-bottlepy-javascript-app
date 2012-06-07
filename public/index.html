@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="only screen and (min-width: 482px)" title="no title" charset="utf-8">
-		<link rel="stylesheet" href="stylesheets/mobile.css" type="text/css" media="only screen and (max-width: 480px)" title="no title" charset="utf-8">
 		<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src='/javascripts/mobile.js'></script>
-
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<!-- // <script type="text/javascript" charset="utf-8" src='/javascripts/mobile.js'></script> -->
+		
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="only screen and (min-width: 482px)" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="stylesheets/mobile.css" type="text/css" media="only screen and (max-width: 480px)" title="no title" charset="utf-8">		
+		
 		<link rel="apple-touch-icon" href="/images/mobile/mycustomIcon.png">
 		<link rel="apple-touch-icon-precomposed" href="/images/mobile/mycustomIcon.png">
 		<link rel="apple-touch-startup-image" href="/images/mobile/mycustomGraphic.png">
@@ -15,37 +18,65 @@
 			<link rel="stylesheet" href="/stylesheets/FUCKING-ie.css" type="text/css" media="all" title="no title" charset="utf-8">
 		<![endif]-->
 		<meta name="viewport" content="user-scalable=no, width=device-width">
-		<title>Orion Mobile:</title>
+		<title>Orion Engleton</title>
 	</head>
+
 	<body>
-		<div id="container">
-			<header>
-				<h1 class="myname"><a href='/'>Orion Engleton</a></h1>
-				<div id="utitilty">
+		<section id="home" class='container' data-role='page' full-screen='true'>
+			<header data-role='header'>
+				<h1 class="myname"><a href='/'>Orion Engleton :: Home</a></h1>
+					<nav data-role='navbar'>
 					<ul>
+						<li><a href="/main">Main</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="#dates">Dates</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/mytweets">Tweets</a></li>
+					</ul>
+					</nav>
+			</header>	
+
+			
+			<div id="base-content"> --- Main Home Page --- </div>
+			<div id='dates'>
+				<div data-role='header'>
+					<h1 id="dates">Dates</h1>
+					<a href="#" class='button back'>Today</a>
+				</div>
+				<ul id="swatch-mixed" class='edge-to-edge' data-role='listview' data-theme="b">
+					<li class='arrow'><a href="#date">Today</a></li>
+					<li class='arrow'><a href="#date">Yesterday</a></li>
+					<li class='arrow'><a href="#date">2 Days Ago</a></li>
+					<li class='arrow'><a href="#date">3 Days Ago</a></li>
+					<li class='arrow'><a href="#date">4 Days Ago</a></li>
+				</ul>
+			</div>
+			<!-- <div class="leftButton">Home</div> -->
+			
+			
+			<footer id="footer" data-role='footer' data-position='fixed'>
+				&copy; OrionEngleton.com
+				<nav data-role='navbar'>
+					<ul class='footer-list'>
 						<li><a href="/favorites">Fav's</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/bio">Bio</a></li>
 						<li><a href="/blog">Blog</a></li>
 					</ul>
-				</div>
+				</nav>
+			</footer>
+		</section>
+
+		<section data-role='page' id='dates'>
+			<header data-role='header'>
+				<h1 id="dates-available">Dates Availablez</h1>
+				<a href="#home" class='button back'>Back</a>
 			</header>
-			
-			<nav>
-				
-			</nav>
-			
-			<div id="base-content">Hello</div>
-			<div class="leftButton">Home</div>
-			
-			<div id="footer">
-				<ul class='footer-list'>
-					<li><a href="/favorites">Fav's</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/bio">Bio</a></li>
-					<li><a href="/blog">Blog</a></li>
-				</ul>
-			</div>
-		</div>
+			<ul data-role='listview'>
+				<li><a href="#page1">Home Dates</a></li>
+				<li><a href="#page1">Home Dates</a></li>
+				<li><a href="#page1">Home Dates</a></li>
+			</ul>
+		</section>
 	</body>
 </html>
