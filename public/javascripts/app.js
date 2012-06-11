@@ -1,6 +1,6 @@
- _user_url = 'user-block'
+_user_url = 'user-block'
  
- function loadBlocks(css_javascript_url) {
+function loadBlocks(css_javascript_url) {
      var head = document.getElementsByTagName('head')[0]
      var _script = document.createElement('script')
      _script.src = 'javascripts/' + css_javascript_url + '.js'
@@ -17,8 +17,7 @@ function check_and_load_if_block_id_exists(block_id) {
 // check_and_load_if_block_id_exists('posts')
 
 function urlArguments() {
-  var args = {}
-  
+  var args = {}  
   var my_javascripts = new Array()
   
   var query = location.search.substring(1)
@@ -30,13 +29,12 @@ function urlArguments() {
     var name = pairs[i].substring(0, pos);
     my_javascripts.push(name)
     var value = pairs[i].substring(pos+1);
-    
     value = decodeURIComponent(value)
     args[name]  = value
   
   }
-  var results = {}
 
+  var results = {}
   results.params = args
   results.script_names = my_javascripts
   return results

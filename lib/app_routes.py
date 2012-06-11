@@ -4,6 +4,7 @@ from bottle import (
     cookie_is_encoded, abort, debug
     )
 from bottle import static_file as HTMLfile
+import bottle_mysql as DBConnection
 
 app = Bottle()
 
